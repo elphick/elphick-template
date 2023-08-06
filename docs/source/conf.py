@@ -1,10 +1,15 @@
 import os
 import sys
+
+import plotly
 from plotly.io._sg_scraper import plotly_sg_scraper
-import plotly.io as pio
 
-pio.renderers.default = 'sphinx_gallery_png'  # 'sphinx_gallery'
+image_scrapers = ('matplotlib', plotly_sg_scraper,)
 
+from plotly.io._sg_scraper import plotly_sg_scraper
+# import plotly.io as pio
+#
+# pio.renderers.default = 'sphinx_gallery_png'  # 'sphinx_gallery'
 
 sys.path.insert(0, os.path.abspath('..'))
 sys.path.insert(0, os.path.abspath('../..'))
@@ -27,9 +32,6 @@ extensions = ['sphinx.ext.autodoc', 'sphinx.ext.autosummary',  # to document the
               'sphinx_gallery.gen_gallery',  # to generate a gallery of examples
               'sphinx_autodoc_typehints',
               'myst_parser',  # for parsing md files
-              # 'sphinxcontrib.datatemplates',
-              # "pyvista.ext.plot_directive",
-              # 'jupyter_sphinx'  # interactive pyvista
               ]
 
 autosummary_generate = True
@@ -40,7 +42,7 @@ sphinx_gallery_conf = {
     'gallery_dirs': 'auto_examples',  # path to where to save gallery generated output
     # 'within_subsection_order': FileNameSortKey,
     'capture_repr': ('_repr_html_', '__repr__'),
-    'image_scrapers': (plotly_sg_scraper, 'matplotlib')
+    'image_scrapers': image_scrapers
 }
 
 # Add any paths that contain templates here, relative to this directory.
