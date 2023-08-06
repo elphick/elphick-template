@@ -23,4 +23,4 @@ Actions to tweak once you have created your repo from this template:
 One of the advantages of the template is the doc publishing onto a gh-pages branch is already configured.
 To leverage this be sure to check the "include all branches" checkbox when creating a new repository from the template.
 
-![img.png](docs/source/_static/new_repo_from_template.png)
+![docs/source/_static/new_repo_from_template.png](docs/source/_static/new_repo_from_template.png)
