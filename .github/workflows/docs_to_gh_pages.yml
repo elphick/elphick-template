@@ -4,10 +4,12 @@ on:
     paths:
       - 'docs/**'
       - 'examples/*.py'
+      - 'README.md'
   pull_request:
     paths:
       - 'docs/**'
       - 'examples/*.py'
+      - 'README.md'
   workflow_dispatch:
 
 
