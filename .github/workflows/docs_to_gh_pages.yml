@@ -27,6 +27,7 @@ jobs:
           pip install sphinx-autodoc-typehints
           pip install myst-parser
           pip install plotly
+          pip install matplotlib
           pip install kaleido
           pip install pytest
       - name: Sphinx build
